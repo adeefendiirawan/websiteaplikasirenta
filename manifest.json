@@ -1,0 +1,23 @@
+{
+  "name": "RENTAL MOBIL LUXURY",
+  "short_name": "Rental Mobil",
+  "description": "Membuat Aplikasi RENTAL MOBIL sederhana dengan javascript PWA",
+  "icons": [
+    {
+      "src": "assets/images/car-rental-2.png",
+      "sizes": "512x512",
+      "type": "image/png"
+  },
+  {
+    "src": "assets/images/car-rental-2.png",
+    "sizes": "192x192",
+  "type": "image/png"
+}
+
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#1F3641", 
+  "background_color": "#ffffff",
+  "prefer_related_applications": false
+}

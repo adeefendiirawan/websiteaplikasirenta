@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="manifest" href="manifest.json">
+  <title>RENTAL MOBIL LUXURY</title>
+</head>
+<body>
+
+  <h1>RENTAL MOBIL LUXURY</h1>
+  <img src="assets/images/WEL123.jpeg" alt="img"/>
+  <fieldset id="rentalForm">
+    <legend>Form Peminjaman</legend>
+    <label for="carType">Jenis Mobil:</label>
+    <select id="carType" name="carType">
+      <option value="Rush">Toyota Rush</option>
+      <option value="Civic">Honda Civic</option>
+      <option value="Calya">Toyota Calya</option>
+    </select>
+    <label for="rentalDays">Jumlah  Hari Peminjaman :</label>
+    <input type="number" id="rentalDays" name="rentalDays" /><br>
+    <br>
+    <!-- Tambah input untuk tanggal penyewaan -->
+    <label for="rentalDate">Tanggal Penyewaan:</label>
+    <input type="date" id="rentalDate" name="rentalDate" />
+
+    <button type="button" onclick="addRental()">Tambah Peminjaman</button>
+  </fieldset>
+
+  <h2>Daftar Peminjaman</h2>
+  <table id="rentalList">
+    <tr>
+      <th>Jenis Mobil</th>
+      <th>Jumlah Hari</th>
+      <th>Total Biaya</th>
+      <th>Aksi</th>
+    </tr>
+  </table>
+
+  <br />
+  <div id="totalPayment"></div>
+
+  <br />
+  <form id="paymentForm" onsubmit="event.preventDefault(); calculateChange()">
+    <label for="amountPaid">Jumlah Bayar:</label><br/>
+    <input type="number" id="amountPaid" name="amountPaid" />
+    <button type="submit">Hitung Kembalian</button>
+    <br>
+  </form>
+    
+  <br />
+  <div id="change"></div>
+  <div>
+    <ul id="list-mobil"></ul>
+    <button onclick="window.print()">Print Hasil</button>
+  </div>
+
+  <script src="/assets/js/fungsi.js"></script>
+  <script src="/assets/js/register.js"></script>
+
+
+  <h4>CATATAN</h4>
+  <p>Toyota Rush: Rp750,000/hari, </p>
+  <p>Toyota Calya: Rp500,000/hari, </p>
+  <p>Honda Civic: Rp650,000/hari</p>
+  <section id="new-cars" class="new-cars">
+    <div class="container">
+      <div class="section-header">
+        <p>checkout <span>the</span> latest cars</p>
+        <h2>Pilihan Mobil</h2>
+      </div><!--/.section-header-->
+      <div class="new-cars-content">
+        <div class="owl-carousel owl-theme" id="new-cars-carousel">
+          <div class="new-cars-item">
+            <div class="single-new-cars-item">
+              <div class="row">
+                <div class="col-md-7 col-sm-12">
+                  <div class="new-cars-img">
+                    <img src="assets/images/Rush1.png" alt="img"/>
+                  </div><!--/.new-cars-img-->
+                </div>
+                <div class="col-md-5 col-sm-12">
+                  <div class="new-cars-txt">
+                    <h2><a href="#">Toyota Rush<span> </span></a></h2>
+                    <p>
+                      Toyota Rush adalah SUV (Sport Utility Vehicle) kompak yang diproduksi oleh produsen otomotif Jepang, Toyota. Kendaraan ini pertama kali diluncurkan pada tahun 2006 dan telah mengalami beberapa pembaruan desain dan penyempurnaan sejak itu.  
+                    </p>
+                    <p class="new-cars-para2">
+                      Fitur Keamanan dan Kenyamanan: Seperti kebanyakan mobil produksi Toyota, Rush dilengkapi dengan berbagai fitur keamanan dan kenyamanan, termasuk sistem pengereman anti-lock (ABS), airbag, sistem infotainment, dan banyak lagi. 
+                    </p>
+                  <br>
+                      <br>
+                    
+                    </button>
+                  </div><!--/.new-cars-txt-->	
+                </div><!--/.col-->
+              </div><!--/.row-->
+            </div><!--/.single-new-cars-item-->
+          </div><!--/.new-cars-item-->
+          <div class="new-cars-item">
+            <div class="single-new-cars-item">
+              <div class="row">
+                <div class="col-md-7 col-sm-12">
+                  <div class="new-cars-img">
+                    <img src="assets/images/Calya.png" alt="img"/>
+                  </div><!--/.new-cars-img-->
+                </div>
+                <div class="col-md-5 col-sm-12">
+                  <div class="new-cars-txt">
+                    <h2><a href="#">Toyota Calya</a></h2>
+                    <p>
+                      Toyota Calya adalah mobil MPV (Multi-Purpose Vehicle) yang diproduksi oleh Daihatsu, salah satu produsen otomotif asal Jepang. Calya dirancang untuk memenuhi kebutuhan konsumen yang mencari kendaraan yang kompak, efisien bahan bakar, dan dapat menampung banyak penumpang. 
+                    </p>
+                    <p class="new-cars-para2">
+                      Meskipun Calya biasanya ditargetkan pada segmen pasar dengan anggaran terbatas, model-model terbaru cenderung dilengkapi dengan fitur keamanan seperti sistem pengereman anti-lock (ABS), sabuk pengaman, dan airbag.
+                    </p>
+                    <br>
+                    </button>
+                  </div><!--/.new-cars-txt-->	
+                </div><!--/.col-->
+              </div><!--/.row-->	
+            </div><!--/.single-new-cars-item-->
+          </div><!--/.new-cars-item-->
+          <div class="new-cars-item">
+            <div class="single-new-cars-item">
+              <div class="row">
+                <div class="col-md-7 col-sm-12">
+                  <div class="new-cars-img">
+                    <img src="assets/images/Civic.png" alt="img"/>
+                  </div><!--/.new-cars-img-->
+                </div>
+                <div class="col-md-5 col-sm-12">
+                  <div class="new-cars-txt">
+                    <h2><a href="#">Honda Civic</a></h2>
+                    <p>
+                      Honda Civic adalah salah satu model mobil kompak yang diproduksi oleh perusahaan otomotif Jepang, Honda. Civic telah menjadi salah satu model yang sangat populer dan ikonik sejak pertama kali diperkenalkan pada tahun 1972.  
+                    </p>
+                    <p class="new-cars-para2">
+                      Model-model terbaru Civic dilengkapi dengan fitur keamanan canggih, termasuk sistem pengereman darurat, kontrol stabilitas, airbag, serta sistem keamanan aktif lainnya.
+                    </p>
+                  </div><!--/.new-cars-txt-->	
+                </div><!--/.col-->
+              </div><!--/.row-->
+            </div><!--/.single-new-cars-item-->
+          </div><!--/.new-cars-item-->
+        </div><!--/#new-cars-carousel-->
+      </div><!--/.new-cars-content-->
+    </div><!--/.container-->
+</body>
+</html>

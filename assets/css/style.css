@@ -1,0 +1,83 @@
+body {
+    text-align: center;
+}
+table {
+    border: 1px solid rgb(255, 237, 237);
+    margin-top: 10px;
+    margin-bottom: 50px;
+    margin-right: 250px;
+    margin-left: 250px;
+    background-color: rgb(202, 202, 202);
+    text-align: center;
+}
+fieldset{
+    position: relative;
+    text-align: center;
+    background-color:#e6e6e6;
+    padding: 25px;
+}
+a,a:hover,a:active,a:focus {
+	display:inline-block;
+	text-decoration:none;
+	color: #3973f0;
+	font-size:20px;
+	padding:0;
+    text-transform: capitalize;
+}
+body {
+    background-image: url("assets/images/Avanzawel.png");
+  }
+
+img {
+    border:none; 
+    max-width: 300px;
+    height:300px;
+}
+
+/* section-header */
+.section-header{
+    position: relative;
+    text-align: center;
+}
+.section-header h2{
+    position: relative;
+    font-size: 36px;
+    font-weight: 500;
+    padding-bottom: 35px;
+}
+.section-header h2:before {
+    position: absolute;
+    content: "";
+    width: 80px;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    margin-left: -42px;
+    background: #5c5c5c;
+}
+.single-model-search h2 {
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+/*model-select-icon*/
+.model-select-icon{
+    position:relative;
+}
+.model-select-icon .form-control {
+    outline: 0!important;
+    box-shadow: none;
+    border: 1px solid #f8f8f8;
+    background: #f8f8f8;
+    height: 60px;
+}
+.model-select-icon select {
+    font-size: 16px;
+    color: #888f9d;
+    text-transform: capitalize;
+}
+.new-cars{
+    background: #f8f9fb;
+    padding:112px 0 120px;
+}
